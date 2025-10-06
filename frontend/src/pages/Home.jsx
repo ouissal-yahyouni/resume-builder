@@ -2,52 +2,37 @@ import React from "react";
 import ButtonUiverse from "../components/ButtonUiverse";
 import "../App.css";
 
-export default function Home() { // ← export default direct
+export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="text-center py-5 bg-light">
-        <div className="container">
-          {/* Titre */}
-          <h1 className="creative-title">The Resume to get your Dream job</h1>
+      <section className="hero-section text-center">
+        <div className="container position-relative">
+          <h1 className="creative-title">
+            The <span>Resume</span> to get your Dream job
+          </h1>
 
-          <p className="lead text-muted mt-3">
+          <p className="lead mt-3">
             Create an impressive resume in minutes. Free to Download
           </p>
 
-          {/* Bouton CTA */}
-          <ButtonUiverse text1="Create" text2="My Resume" />
+          <div className="mt-4">
+            <button className="hero-btn">Create My Resume</button>
+          </div>
 
-          {/* Confiance */}
           <p className="text-muted mt-4">
-            <i className="fas fa-star text-warning"></i> Trusted by 1.5M+ job finder
-            worldwide
+            <i className="fas fa-star text-warning"></i> Trusted by 1.5M+ job finder worldwide
           </p>
 
-          {/* Images de CV */}
-          <div className="row justify-content-center mt-5">
-            <div className="col-md-3">
-              <img
-                src="/images/cv1.jpg"
-                alt="CV template 1"
-                className="img-fluid shadow rounded-3"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="/images/cv2.jpg"
-                alt="CV template 2"
-                className="img-fluid shadow rounded-3"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="/images/cv3.jpg"
-                alt="CV template 3"
-                className="img-fluid shadow rounded-3"
-              />
-            </div>
+          {/* CV Preview Images */}
+          <div className="cv-images">
+            <img src="/images/cv1.jpg" alt="CV Template 1" />
+            <img src="/images/cv2.jpg" alt="CV Template 2" />
+            <img src="/images/cv3.jpg" alt="CV Template 3" />
           </div>
+
+          {/* Decorative Wave */}
+          <img src="/images/wave.svg" alt="wave decoration" className="hero-wave" />
         </div>
       </section>
 
@@ -55,14 +40,10 @@ export default function Home() { // ← export default direct
       <section className="py-5">
         <div className="container">
           <div className="row text-center">
-            {/* Main Card - Create a resume That gets results */}
-           
-
-            {/* Feature 1 */}
             <div className="col-md-4 mb-4">
               <div className="custom-card p-4 h-100">
                 <div className="feature-icon mb-3">
-                  <i className="fas fa-check-circle text-primary" style={{fontSize: '2rem'}}></i>
+                  <i className="fas fa-check-circle" style={{ fontSize: "2rem" }}></i>
                 </div>
                 <h4 className="feature-title">Recruiter-Approved Resume</h4>
                 <p className="feature-text">
@@ -71,11 +52,10 @@ export default function Home() { // ← export default direct
               </div>
             </div>
 
-            {/* Feature 2 */}
             <div className="col-md-4 mb-4">
               <div className="custom-card p-4 h-100">
                 <div className="feature-icon mb-3">
-                  <i className="fas fa-clock text-primary" style={{fontSize: '2rem'}}></i>
+                  <i className="fas fa-clock" style={{ fontSize: "2rem" }}></i>
                 </div>
                 <h4 className="feature-title">Finish Your Resume in 15 min</h4>
                 <p className="feature-text">
@@ -84,15 +64,14 @@ export default function Home() { // ← export default direct
               </div>
             </div>
 
-            {/* Feature 3 */}
             <div className="col-md-4 mb-4">
               <div className="custom-card p-4 h-100">
                 <div className="feature-icon mb-3">
-                  <i className="fas fa-briefcase text-primary" style={{fontSize: '2rem'}}></i>
+                  <i className="fas fa-briefcase" style={{ fontSize: "2rem" }}></i>
                 </div>
                 <h4 className="feature-title">Land an Interview</h4>
                 <p className="feature-text">
-                  Get matched to jobs that match your experience. Better jobs mean you land more interviews.
+                  Get matched to jobs that match your experience. Better jobs mean more interviews.
                 </p>
               </div>
             </div>
