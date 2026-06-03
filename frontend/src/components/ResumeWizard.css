@@ -1,0 +1,8 @@
+.logo-wrapper svg {
+  filter: grayscale(1);
+  transition: filter .3s ease;
+}
+
+.logo-wrapper:hover svg {
+  filter: grayscale(0);
+}

@@ -16,6 +16,7 @@ const resumeSchema = new mongoose.Schema(
       phone: { type: String },
       address: { type: String },
       photo: { type: String },
+      summary: { type: String },
     },
 
     experiences: [
@@ -31,6 +32,7 @@ const resumeSchema = new mongoose.Schema(
     education: [
       {
         school: String,
+        degree: String,
         fieldOfStudy: String,
         startDate: Date,
         endDate: Date,

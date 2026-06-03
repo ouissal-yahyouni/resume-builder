@@ -1,27 +1,30 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./store"; // Adjust path if needed
 import Home from "./pages/home";
-import About from "./pages/About";
-import Resumes from "./pages/Resumes";
-import Prices from "./pages/Prices";
+import ResumeWizard from "./components/ResumeWizard";
+import CVForm from "./pages/CVForm";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router>
-      <Navbar/>
-
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/about" element={<About />} />
-        <Route path="/resumes" element={<Resumes />} />
-        <Route path="/prices" element={<Prices />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/resumes" element={<ResumeWizard />} />
+          <Route path="/prices" element={<CVForm />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </Provider>
   );
 }
 
